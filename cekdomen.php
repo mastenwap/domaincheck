@@ -1,5 +1,5 @@
 <?php 
-//change xxx.com with your domain
+//change xxx with your domain
 function curldomen($domen)
 {
 	// echo "token=9bc051c6d2165f10dff0db0c0a1221fd6922bb89&a=checkDomain&domain=$domen&type=domain";
@@ -39,7 +39,7 @@ while (!feof($file_handle))
 	$line_of_text = fgets($file_handle);
 	$line_of_text = trim($line_of_text);
 	//change with your domain check, i try to use xxx.com
-	curldomen("xxx.com.".$line_of_text);
+	curldomen("xxx".$line_of_text);
 
 }
 
