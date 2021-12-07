@@ -1,5 +1,5 @@
 <?php 
-
+//change xxx.com with your domain
 function curldomen($domen)
 {
 	// echo "token=9bc051c6d2165f10dff0db0c0a1221fd6922bb89&a=checkDomain&domain=$domen&type=domain";
@@ -22,7 +22,7 @@ function curldomen($domen)
 	// print_r($result['result'][0]['pricing']);
 	echo $domen." ".$result['result'][0]['legacyStatus']." ".$result['result'][0]['pricing'][1]['register']."\n";
 	$data = $result['result'][0]['domainName']." ".$result['result'][0]['legacyStatus']." ".$result['result'][0]['pricing'][1]['register'];
-	if ($result['result'][0]['legacyStatus'] == 'available' and $result['result'][0]['domainName'] !== 'siloam-hospitals.com') 
+	if ($result['result'][0]['legacyStatus'] == 'available' and $result['result'][0]['domainName'] !== 'xxx.com') 
 	{
 		$file = fopen('LogDomain2.txt', 'a+') or die ("gabisa di buka bosque !");
 		$isi  = $data."\n";
@@ -38,9 +38,9 @@ while (!feof($file_handle))
 {
 	$line_of_text = fgets($file_handle);
 	$line_of_text = trim($line_of_text);
-	// echo "$line_of_text";
-	curldomen("siloam-hospitals.".$line_of_text);
-	// echo "siloamhospitals.".$line_of_text;
+	//change with your domain check, i try to use xxx.com
+	curldomen("xxx.com.".$line_of_text);
+
 }
 
 ?>
